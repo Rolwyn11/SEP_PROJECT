@@ -65,6 +65,12 @@ public class SinhCalculatorGuiV1 {
 
     inputPanel.add(inputLabel);
     inputPanel.add(inputField);
+
+    // Accessibility for input
+    inputLabel.setLabelFor(inputField);
+    inputField.getAccessibleContext().setAccessibleName("X Input Field");
+    inputField.getAccessibleContext().setAccessibleDescription("Enter a real number for x");
+
     inputPanel.setBorder(new EmptyBorder(5, 20, 5, 20));
 
     // Result Label
@@ -81,6 +87,16 @@ public class SinhCalculatorGuiV1 {
     computeButton.setFont(standardFont);
     resetButton.setFont(standardFont);
     exitButton.setFont(standardFont);
+
+    // Accessibility for buttons
+    computeButton.getAccessibleContext().setAccessibleName("Compute Button");
+    computeButton.getAccessibleContext().setAccessibleDescription("Computes sinh(x) when clicked");
+
+    resetButton.getAccessibleContext().setAccessibleName("Reset Button");
+    resetButton.getAccessibleContext().setAccessibleDescription("Clears input and result");
+
+    exitButton.getAccessibleContext().setAccessibleName("Exit Button");
+    exitButton.getAccessibleContext().setAccessibleDescription("Closes the application");
 
     computeButton.setToolTipText("Click to compute sinh(x)");
     resetButton.setToolTipText("Clear input and result");
@@ -116,6 +132,7 @@ public class SinhCalculatorGuiV1 {
     frame.add(buttonPanel, BorderLayout.SOUTH);
 
     frame.setVisible(true);
+    frame.getRootPane().setDefaultButton(computeButton);
 
     // Action Listeners
     computeButton.addActionListener(e -> {
