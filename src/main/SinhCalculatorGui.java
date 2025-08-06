@@ -30,11 +30,11 @@ public class SinhCalculatorGui {
    */
   private static void createAndShowGui() {
     JFrame frame = new JFrame("sinh(x) Calculator");
-    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
     frame.setSize(450, 250);
     frame.setLayout(new BorderLayout());
 
-    JLabel titleLabel = new JLabel("sinh(x) Calculator", JLabel.CENTER);
+    JLabel titleLabel = new JLabel("sinh(x) Calculator", javax.swing.SwingConstants.CENTER);
     titleLabel.setFont(new Font("SansSerif", Font.BOLD, 20));
     frame.add(titleLabel, BorderLayout.NORTH);
 
@@ -46,7 +46,7 @@ public class SinhCalculatorGui {
 
     // Compute Button + Result (moved closer to usage)
     final JButton computeButton = new JButton("Compute");
-    final JLabel resultLabel = new JLabel("Result will be displayed here", JLabel.CENTER);
+    final JLabel resultLabel = new JLabel("Result will be displayed here", javax.swing.SwingConstants.CENTER);
 
     JPanel buttonPanel = new JPanel();
     JButton resetButton = new JButton("Reset");
@@ -68,7 +68,7 @@ public class SinhCalculatorGui {
         double x = Double.parseDouble(inputField.getText());
         double result = computeSinh(x);
         resultLabel.setText(String.format("sinh(%.4f) = %.6f", x, result));
-      } catch (NumberFormatException ex) {
+      } catch (NumberFormatException _) {
         resultLabel.setText("Invalid input. Please enter a real number.");
       }
     });
