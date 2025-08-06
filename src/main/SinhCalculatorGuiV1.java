@@ -1,3 +1,11 @@
+/**
+ * A GUI-based calculator to compute sinh(x) using Taylor series.
+ * Version: 1.0.0
+ * Author: Rolwyn Raju
+ * Date: August 5, 2025
+ * Course: SOEN 6011 - Software Engineering Processes
+ */
+
 package main;
 
 import java.awt.BorderLayout;
@@ -14,7 +22,7 @@ import javax.swing.SwingUtilities;
 /**
  * A GUI-based calculator to compute sinh(x) using Taylor series.
  */
-public class SinhCalculatorGui {
+public class SinhCalculatorGuiV1 {
 
   /**
    * Main entry point.
@@ -22,7 +30,7 @@ public class SinhCalculatorGui {
    * @param args command-line arguments
    */
   public static void main(String[] args) {
-    SwingUtilities.invokeLater(SinhCalculatorGui::createAndShowGui);
+    SwingUtilities.invokeLater(SinhCalculatorGuiV1::createAndShowGui);
   }
 
   /**
@@ -46,7 +54,8 @@ public class SinhCalculatorGui {
 
     // Compute Button + Result (moved closer to usage)
     final JButton computeButton = new JButton("Compute");
-    final JLabel resultLabel = new JLabel("Result will be displayed here", javax.swing.SwingConstants.CENTER);
+    final JLabel resultLabel =
+            new JLabel("Result will be displayed here", javax.swing.SwingConstants.CENTER);
 
     JPanel buttonPanel = new JPanel();
     JButton resetButton = new JButton("Reset");
