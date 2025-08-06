@@ -1,6 +1,6 @@
 /**
  * A GUI-based calculator to compute sinh(x) using Taylor series.
- * Version: 1.0.0
+ * Version: 1.1.0
  * Author: Rolwyn Raju
  * Date: August 5, 2025
  * Course: SOEN 6011 - Software Engineering Processes
